@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman App</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" href="C:/Users/psc/Desktop/5th pnc/Lab/html5/project1/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		body{
+			background-color: #cc66ff;
+			text-align: center;
+		}
+	</style>
+</head>
+<body ng-app="HangamaApp" ng-controller="GameController" align="center">
+		<div class="container">
+
+			<div class="col-sm-12">
+				<br>
+        		<h1>HANGMAN GAME</h1>
+        		<br>
+       			<h3>Gusee A Word Which Is Written In * Format</h3>
+       			<br><br>
+    		</div>
+
+			<div class="row">
+
+				<div class="col-sm-4"><h3>Your Incorrect Gusses :: <span ng-repeat="letter in inCorrectLetterChoose">{{letter}}</span></h3></div>				
+
+				<div class="col-sm-4"><h3>Gusses Left :: {{guesses}}</h3></div>
+
+				<div class="col-sm-4"><h3>Your Correct Gusses :: <span ng-repeat="letter in CorrectLetterChoose">{{letter}}</span></h3></div>
+
+			</div>
+			<br>
+
+			<div><h3>You Have To Guess :: {{display}}</h3></div>
+
+			<br>
+
+			<div>
+				<input type="text" name="Guess" ng-model="input.letter">
+				<button ng-click="letterChoosen()">Submit</button>
+			</div>
+			<br><br><br>
+
+			<div>
+    	<p>Copyright © praveen sanpada, All Rights Reserved.</p>
+    </div>
+
+		</div>
+</body>
+</html>
